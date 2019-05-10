@@ -1,7 +1,7 @@
 # WebDesign-Game
 I'm developing a website for a game that we're creating, this is the main design maded in Adobe XD.
 
-##To run the Design:
+## To run the Design:
 
 1º Download the files;
 
