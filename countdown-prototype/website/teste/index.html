@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>teste button</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="jquery-3.4.1.min.js" type="text/javascript"></script>   
+</head>
+<body>
+	<div class="search">
+  		<input type="search" class="search-box"/>
+  		<span class="search-button">
+    		<span class="search-icon"></span>
+  		</span>
+	</div>
+
+	<script>
+		$('.search-button').click(function(){
+			$(this).parent().toggleClass('open');
+		});
+	</script>
+
+</body>
+</html>
