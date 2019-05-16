@@ -2,7 +2,6 @@
 body{ 
     text-align: center; 
     background-color:rgb(5,5,5);
-  	font-family: sans-serif; 
   	font-weight: 100; 
 } 
  #clockdiv{ 
@@ -72,8 +71,8 @@ body{
 }
 
 .search {
-  width: 100px;
-  height: 100px;
+  width: 40px; /* tamanho do bloco */
+  height: 40px; /* tamanho do bloco */
   margin: 40px auto 0;
   background-color: #181728;
   position: relative;
@@ -83,8 +82,8 @@ body{
 .search:before {
   content: '';
   display: block;
-  width: 3px;
-  height: 100%;
+  width: 2px;
+  height: 100%; /* tamanho da linha da esquerda */
   position: relative;
   background-color: #3DD0D8;
   transition: all 0.5s ease;
@@ -94,8 +93,8 @@ body{
 }
 .search.open:before {
   content: '';
-  height: 60px;
-  margin: 20px 0 20px 30px;
+  height: 24px; /* tamanho da type line */
+  margin: 8px 0 20px 30px;
   position: absolute;
 }
 .search-box {
@@ -106,7 +105,7 @@ body{
   background: transparent;
   color: #fff;
   padding: 20px 100px 20px 45px;
-  font-size: 40px;
+  font-size: 20px;
 }
 .search-box:focus {
   outline: none;
@@ -122,21 +121,22 @@ body{
   cursor: pointer;
 }
 .search-icon {
-  width: 60px;
-  height: 60px;
+  width: 28px;
+  height: 28px;
   border-radius: 40px;
-  border: 3px solid #3DD0D8;
+  border: 2px solid #3DD0D8;
   display: block;
   position: relative;
-  margin-left: 5px;
+  margin-left: 47px;
+  margin-top: -14.5px;
   transition: all 0.5s ease;
 }
 .search-icon:before {
   content: '';
-  width: 3px;
-  height: 29px;
+  width: 2px;
+  height: 15.7px; /* tamanho da linha da esquerda */
   position: absolute;
-  right: 37px; /* linha da esquerda do search */
+  right: 18px; /* linha da esquerda do search */
   top: 5px;
   display: block;
   background-color: #3DD0D8;
@@ -145,11 +145,11 @@ body{
 }
 .search-icon:after {
   content: '';
-  width: 3px;
-  height: 29px;
+  width: 2px;
+  height: 15.7px;/* tamanho da linha da direita */
   position: absolute;
-  right: 14px; /* linha da direita do search */
-  top: 5px;
+  right: 4.8px; /* linha da direita do search */
+  top:5px;
   display: block;
   background-color: #3DD0D8;
   transform: rotate(60deg);
@@ -157,21 +157,23 @@ body{
 }
 .open .search-icon {
   margin: 0;
-  width: 60px;
-  height: 60px;
+  width: 28px;
+  height: 28px;
+  bottom: 13px;
   border-radius: 60px;
+  left: 30px;
 }
 .open .search-icon:before {
   content: '';
   transform: rotate(52deg);
   right: 22px;
   top: 23px;
-  height: 18px;
+  height: 18px; /* tamanho da linha de baixo */
 }
 .open .search-icon:after {
   content: '';
   transform: rotate(-230deg);
   right: 22px;
   top: 13px;
-  height: 18px;
+  height: 18px; /* tamanho da linha de cima */
 }
