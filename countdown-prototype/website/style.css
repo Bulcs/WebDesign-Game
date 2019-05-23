@@ -1,13 +1,74 @@
-
+*{
+  padding: 0;
+  margin: 0;
+}
 body{ 
     text-align: center; 
     background-color:rgb(5,5,5);
   	font-weight: 100; 
-} 
- #clockdiv{ 
+}
+
+@media screen and (min-width: 300px) { 
+  #logo > img{
+    width: 12% !important; 
+  }
+  #clockdiv{
+    font-size: 50px !important;
+  }
+  .smalltext{
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 768px) { 
+  #logo > img{
+    width: 12% !important; 
+  }
+  #clockdiv{
+    font-size: 100px !important;
+  }
+  .smalltext{
+    font-size: 23px !important;
+  }
+}
+
+@media screen and (min-width: 992px) { 
+  #logo > img{
+    width: 12% !important; 
+  } 
+  #clockdiv{
+    font-size: 150px !important;
+  }
+  .smalltext{
+    font-size: 35px !important;
+  }
+}
+
+@media screen and (min-width: 1600px) {  
+  #logo > img{
+    width: 12% !important; 
+  }
+  #clockdiv{
+    font-size: 200px !important;
+  }
+  .smalltext{
+    font-size: 45px !important;
+  }
+}
+
+@font-face{
+
+    /*Caso a fonte esteja na mesma pasta*/
+    src: url("/font/Square.eot");
+}
+
+#time{
+  max-width: 1128px;
+  min-width: 300px;
+}
+#clockdiv{ 
     font-family: SquareFont; 
     color: #fff; 
-    display: inline-block; 
     font-weight: 100; 
     text-align: center; 
     font-size: 150px; 
@@ -27,41 +88,18 @@ body{
 } 
 
 #logo{
-	padding-top: 100px;
+	padding-top: 70px;
 	padding-bottom: 100px;
 	margin-bottom:-80px;
 }
 #logo > img{
+  max-width: 100%;
 	display: block;
 	margin-right: auto;
 	margin-left: auto;
 }
 .wrapper{
 	text-align: center;
-}
-.button {
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-	font-family: Dosis;
-	font-weight: 600;
-	background-color: rgb(250,250,250); 
-	border: solid;
-	border-color: white;
-	border-width: 0.1px;
-	border-radius: 11px;
-	color: black;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-}
-.button:hover {
-	background-color:rgb(5,5,5); 
-	border: solid;
-	border-width: 0.1px;
-	border-color:white; 
-	color: white;
 }
 
 /* BUTTOM CSS */
@@ -74,28 +112,34 @@ body{
   width: 40px; /* tamanho do bloco */
   height: 40px; /* tamanho do bloco */
   margin: 40px auto 0;
-  background-color: #181728;
+  background-color: rgb(5,5,5);
   position: relative;
   overflow: hidden;
   transition: all 0.5s ease;
 }
+
 .search:before {
   content: '';
   display: block;
   width: 2px;
-  height: 100%; /* tamanho da linha da esquerda */
+  height: 100%; 
   position: relative;
-  background-color: #3DD0D8;
   transition: all 0.5s ease;
+  visibility: hidden;
 }
+
 .search.open {
-  width: 420px;
+	background-color: #fff;
+  	width: 400px;
+  	border-radius: 20px;
 }
 .search.open:before {
-  content: '';
-  height: 24px; /* tamanho da type line */
-  margin: 8px 0 20px 30px;
-  position: absolute;
+	visibility: visible;
+  	content: '';
+  	background-color: rgb(5,5,5);
+  	height: 24px; /* tamanho da type line */
+  	margin: 8px 0 20px 30px;
+  	position: absolute;
 }
 .search-box {
   width: 100%;
@@ -103,9 +147,10 @@ body{
   box-shadow: none;
   border: none;
   background: transparent;
-  color: #fff;
+  color: rgb(5,5,5);
   padding: 20px 100px 20px 45px;
-  font-size: 20px;
+
+  font-size: 17px;
 }
 .search-box:focus {
   outline: none;
@@ -115,8 +160,8 @@ body{
   height: 100px;
   display: block;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 1px;
+  top: 0px;
   padding: 20px;
   cursor: pointer;
 }
@@ -124,7 +169,7 @@ body{
   width: 28px;
   height: 28px;
   border-radius: 40px;
-  border: 2px solid #3DD0D8;
+  border: 2px solid #fff;
   display: block;
   position: relative;
   margin-left: 47px;
@@ -139,7 +184,7 @@ body{
   right: 18px; /* linha da esquerda do search */
   top: 5px;
   display: block;
-  background-color: #3DD0D8;
+  background-color: #fff;
   transform: rotate(-60deg);
   transition: all 0.5s ease;
 }
@@ -149,31 +194,34 @@ body{
   height: 15.7px;/* tamanho da linha da direita */
   position: absolute;
   right: 4.8px; /* linha da direita do search */
-  top:5px;
+  top: 5px;
   display: block;
-  background-color: #3DD0D8;
+  background-color: #fff;
   transform: rotate(60deg);
   transition: all 0.5s ease;
 }
 .open .search-icon {
-  margin: 0;
-  width: 28px;
-  height: 28px;
-  bottom: 13px;
-  border-radius: 60px;
-  left: 30px;
+	border-color: rgb(5,5,5);
+  	margin: 0;
+  	width: 28px;
+  	height: 28px;
+  	bottom: 13px;
+  	border-radius: 60px;
+  	left: 30px;
 }
 .open .search-icon:before {
   content: '';
   transform: rotate(52deg);
-  right: 22px;
-  top: 23px;
-  height: 18px; /* tamanho da linha de baixo */
+  right: 10px;
+  top: 10px;
+  height: 10px; /* tamanho da linha de baixo */
+  background-color: rgb(5,5,5);
 }
 .open .search-icon:after {
   content: '';
   transform: rotate(-230deg);
-  right: 22px;
-  top: 13px;
-  height: 18px; /* tamanho da linha de cima */
+  right: 10px;
+  top: 4.5px;
+  height: 10px; /* tamanho da linha de cima */
+  background-color: rgb(5,5,5);
 }
