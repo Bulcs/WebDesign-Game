@@ -14,7 +14,7 @@ body{
 
 @media screen and (min-width: 300px) { 
   #logo{
-    padding-top: 110px !important;
+    padding-top: 70px !important;
   }
   #logo > img{
     width: 30% !important; 
@@ -98,6 +98,7 @@ body{
     font-weight: 100; 
     text-align: center; 
     font-size: 150px; 
+    margin-top: -30px;
 } 
 #clockdiv > div{ 
     padding: 0px;  
@@ -126,7 +127,19 @@ body{
 .wrapper{
 	text-align: center;
 }
-
+/*-------------------------ICONS------------------------------*/
+li {
+  list-style: none;
+}
+.item{
+  display: inline;
+}
+li img{
+  width: 5%;
+}
+#social{
+  margin-top: 20px;
+}
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 /*----------------------- BUTTON -----------------------------*/
