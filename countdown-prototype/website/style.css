@@ -99,7 +99,10 @@ body{
     text-align: center; 
     font-size: 150px; 
     margin-top: -30px;
-} 
+}
+#clockdiv-container{
+  padding-top:20px;
+}
 #clockdiv > div{ 
     padding: 0px;  
     display: inline-block; 
@@ -131,14 +134,25 @@ body{
 li {
   list-style: none;
 }
-.item{
-  display: inline;
+ul{
+  float: left;
 }
-li img{
-  width: 2%;
+.fab{
+  padding: 15px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
 }
-#social{
-  margin-top: 20px;
+.fab:hover{
+  opacity: 0.7;
+}
+.fa-facebook-square {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+  background: linear-gradient(purple,red, yellow);
+  color: white;
 }
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
