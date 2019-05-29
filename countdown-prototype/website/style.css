@@ -9,7 +9,8 @@ body{
 }
 
 @font-face{
-    src: url("/font/Square.eot");
+    src: url(font/Square.ttf);
+    font-family: SquareFont;
 }
 
 @media screen and (min-width: 300px) { 
@@ -135,13 +136,23 @@ li {
   list-style: none;
 }
 ul{
+  position: absolute;
+  z-index: 1;
   float: left;
 }
-.fab{
+.fa-facebook-square{
   padding: 15px;
   font-size: 30px;
   text-align: center;
   text-decoration: none;
+  border-radius: 0px 10px 0px 0px;
+}
+.fa-instagram{
+  padding: 15px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0px 0px 10px 0px;
 }
 .fab:hover{
   opacity: 0.7;
